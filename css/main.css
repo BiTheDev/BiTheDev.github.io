@@ -81,12 +81,13 @@ section{
 
 
 
-#top::before{
+#top{
     background-image: url('../images/cover.jpg') !important;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    width:100% !important;
     display: flex;
     min-height:100vh;
     flex-direction: column;
@@ -187,9 +188,10 @@ section{
     background-color: white;
 }
 
-#projects::before{
+#projects{
     min-height: 100vh;
     display: flex;
+    width:100%;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
