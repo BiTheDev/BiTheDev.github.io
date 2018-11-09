@@ -81,7 +81,7 @@ section{
 
 
 
-#top{
+#top::before{
     background-image: url('../images/cover.jpg') !important;
     background-attachment: fixed;
     background-position: center;
@@ -187,7 +187,7 @@ section{
     background-color: white;
 }
 
-#projects{
+#projects::before{
     min-height: 100vh;
     display: flex;
     flex-direction: row;
