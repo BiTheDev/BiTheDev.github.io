@@ -127,3 +127,84 @@
 
 
 }
+
+/* Iphone vertical */
+@media only screen and (max-width:414px){
+    #thumbnail{
+        justify-content: center;
+        padding-top: 0em;
+    }
+    .arrow{
+        top:60%;
+    }
+
+    .MeContent .introbox{
+        height:500px
+    }
+
+    #Education{
+        clip-path: polygon(50% 4%, 100% 0, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 0);
+    }
+
+    .ExpContent{
+        width:100%;
+    }
+
+    .ExpContent h5{
+        font-size: 15px;
+    }
+
+    .ExpContent h6{
+        font-size: 14px;
+    }
+
+    .certibox{
+        width:90%;
+    }
+
+    #Skills{
+        padding-bottom: 6em;
+    }
+
+    .SkillBox img{
+        width:4em;
+        height:4em;
+    }
+    .tabs ul{
+        min-height: 6vh;
+    }
+
+    .tabs ul li{
+        margin: 0 2px;
+    }
+
+    #Projects{
+        padding-top:6em;
+    }
+
+    .ProBox{
+        width:100%;
+    }
+
+
+}
+
+@media only screen and (max-width: 375px){
+    .MeContent .introbox{
+        width:90%;
+    }
+
+    .school{
+        width:100%;
+    }
+
+    .SkillBox img{
+        width:3em;
+        height:3em;
+    }
+
+    #Projects{
+        padding-top: 8em;
+    }
+}
+
