@@ -10,6 +10,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href=" css/shootingstar.css"> -->
@@ -21,11 +22,11 @@
     <nav class="topnav mdb-color lighten-4" id="myTopnav">
         <a onclick="ChangeView('thumbnail')" class="navbar-brand">Brian Ho</a>
         <a class="links" onclick="ChangeView('AboutMe')">About me</a>
-        <a class="links" onclick="ChangeView('edu')">Education</a>
+        <a class="links" onclick="ChangeView('Edu')">Education</a>
         <a class="links" onclick="ChangeView('skill')">Skills</a>
         <a class="links" onclick="ChangeView('Jobs')">Experience</a>
         <a class="links" onclick="ChangeView('project')">Projects</a>
-        <a class="links" href="#contact">Contact Me</a>
+        <a class="links" onclick="ChangeView('contact')">Contact Me</a>
         <a class="icon" href="javascript:void(0);" class="icon" onclick="responsivenav()">
             <i class="fa fa-bars"></i>
         </a>
@@ -45,7 +46,7 @@
                     </g></svg>
 
             </h1>
-            <h2>A Full Stack Developer
+            <h2>Student, Full Stack Developer
                 </h1>
                 <span onclick="ChangeView('AboutMe')" class="arrow">Learn More</span>
     </div>
@@ -152,7 +153,7 @@
                 </div>
             </div>
         </div>
-        <div class="Skills">
+        <div id="Skills">
             <h2 style="text-align:center">Skills</h2>
             <div class="SkillContent">
                 <div class="tabs">
@@ -205,7 +206,7 @@
                 </div>
             </div>
         </div>
-        <div class="Experience">
+        <div id="Experience">
             <h2 style="text-align:center">Experience</h2>
             <div class="ExpContent">
                 <hr>
@@ -223,7 +224,7 @@
                 </ul>
             </div>
         </div>
-        <div class="Projects">
+        <div id="Projects">
                 <h2 style="text-align:center; color:black;">Projects</h2>
                 <div class="ProContent">
                     <div class="ProBox">
@@ -264,7 +265,7 @@
                     </div>
                 </div>
         </div>
-        <footer>
+        <footer id="Contact">
                 <h2 style="text-align:center;">Contact Me</h2> 
                 <div class="myInfo">
                     <p>Location: Greater Seattle Area</p>

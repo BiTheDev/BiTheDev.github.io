@@ -1,0 +1,129 @@
+/* Monitor */
+@media only screen and (max-width:1280px){
+    #thumbnail{
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 95%, 0 100%, 0 0);
+    }
+    #AboutMe{
+    padding-top:4em;
+    padding-bottom:1em;
+    }
+    #Skills{
+        padding-top:4em;
+        padding-bottom:5em;
+    }
+    .SkillContent{
+        width:90%;
+    }
+    .SkillBox img{
+        width:5em;
+        height:5em;
+    }
+    #Education {
+        clip-path: polygon(50% 5%, 100% 0, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 0);
+        padding-top: 4em;
+    }
+
+    #Experience{
+        padding-top: 4em;
+        padding-bottom:2em;
+    }
+    .ExpContent h5{
+        font-size: 18px;
+    }
+    .ExpContent h6{
+        font-size: 16px;
+    }
+
+    #Projects{
+        padding-top:4em;
+    }
+    .ProBox{
+        padding: 2em .5em;
+    }
+
+    
+}
+
+/* Macbook */
+@media only screen and (max-width:1024px){
+    #AboutMe{
+        width:100%;
+    }
+    .SkillBox img{
+        width:3em;
+        height:3em;
+    }
+
+    .ExpContent{
+        width:70%;
+    }
+    .ProContent{
+        width:95%;
+    }
+}
+
+/* Iphone X */
+@media only screen and (max-width: 812px){
+    #thumbnail{
+        justify-content: flex-start;
+        padding-top: 4em;
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
+    }
+    #thumbnail h1{
+        font-size: 40px;
+    }
+    path{
+        width:250;
+    }
+    #thumbnail h2{
+        font-size: 32px;
+    }
+    .arrow{
+        top:45%;
+    }
+    .MeContent{
+        flex-wrap: wrap;
+    }
+
+    .MeContent .introbox {
+        width:60%;
+        margin-bottom: 20px;
+    }
+    #Education{
+        padding-top:7em;
+    }
+
+    .school{
+        width:80%;
+    }
+
+    .certiContent{
+        flex-wrap: wrap;
+    }
+    .certibox{
+        width:60%;
+        margin-bottom:20px;
+    }
+
+    .SkillContent{
+        width:100%;
+    }
+
+    .SkillBox img{
+        width:2em;
+        height:2em;
+    }
+
+    .ExpContent {
+        width:90%;
+    }
+    #Projects{
+        margin-top: -15vh;
+    }
+    .ProBox{
+        width:48%;
+        margin:5px;
+    }
+
+
+}

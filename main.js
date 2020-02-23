@@ -9,10 +9,41 @@ function responsivenav() {
 
 function ChangeView(value) {
     switch (value) {
+        case "thumbnail":
+            $('html,body').animate({
+                scrollTop: $("#thumbnail").offset().top
+            }, 'normal')
+            break;
         case "AboutMe":
             $('html,body').animate({
                 scrollTop: $("#AboutMe").offset().top
             }, 'normal')
+            break;
+        case "Edu":
+            $('html,body').animate({
+                scrollTop: $("#Education").offset().top
+            }, 'normal')
+            break;
+        case "skill":
+            $('html,body').animate({
+                scrollTop: $("#Skills").offset().top
+            }, 'normal')
+            break;
+        case "Jobs":
+            $('html,body').animate({
+                scrollTop: $("#Experience").offset().top
+            }, 'normal')
+            break;
+        case "project":
+            $('html,body').animate({
+                scrollTop: $("#Projects").offset().top
+            }, 'normal')
+            break;
+        case "contact":
+            $('html,body').animate({
+                scrollTop: $("#Contact").offset().top
+            }, 'normal')
+            break;
     }
 }
 //Page Transcation
