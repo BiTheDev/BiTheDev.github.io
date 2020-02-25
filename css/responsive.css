@@ -128,6 +128,24 @@
 
 }
 
+@media only screen and (max-width:768px){
+    #thumbnail{
+        justify-content: center;
+    }
+    .arrow{
+        top:65%;
+    }
+}
+
+@media only screen and (max-width:736px){
+    #thumbnail{
+        justify-content: flex-start;
+    }
+
+    .arrow{
+        top:45%;
+    }
+}
 /* Iphone vertical */
 @media only screen and (max-width:414px){
     #thumbnail{
