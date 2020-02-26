@@ -125,6 +125,10 @@
         margin:5px;
     }
 
+    #Skills, #Projects{
+        background-color:white;
+    }
+
 
 }
 
