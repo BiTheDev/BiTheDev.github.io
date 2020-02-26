@@ -360,7 +360,7 @@ hr:before {
      background-color: rgb(52,73,94);
      z-index: -1;
     min-height: 60vh;
-    max-height:auto;
+    /* max-height:auto; */
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -443,6 +443,8 @@ hr:before {
 
 #Skills{
     background-image: url("../images/cloud.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -545,6 +547,8 @@ hr:before {
 
 #Projects{
     background-image: url("../images/sakura.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
