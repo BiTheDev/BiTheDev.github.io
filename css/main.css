@@ -448,7 +448,9 @@ hr:before {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    webkit-background-size: cover;
     background-size: cover;
+    width:100%;
     min-height:85vh;
     z-index: -1;
     padding-top:5em;
@@ -549,11 +551,13 @@ hr:before {
     background-image: url("../images/sakura.jpg");
     -moz-background-size: cover;
     -o-background-size: cover;
+    webkit-background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: -10vh;
+    width:100%;
     height: auto;
     padding-top:5em;
     padding-bottom: 1em;
