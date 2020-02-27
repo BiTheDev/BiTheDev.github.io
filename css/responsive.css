@@ -60,6 +60,10 @@
     .ProContent{
         width:95%;
     }
+
+    #Skills, #Projects{
+        background: white fixed center no-repeat cover;
+    }
 }
 
 /* Iphone X */
