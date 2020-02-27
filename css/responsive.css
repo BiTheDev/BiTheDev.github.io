@@ -60,6 +60,9 @@
     .ProContent{
         width:95%;
     }
+    #Projects, #Skills{
+        background-attachment: scroll;
+    }
 
 }
 
@@ -126,9 +129,6 @@
         margin:5px;
     }
 
-    #Skills, #Projects{
-        background: white fixed center no-repeat cover;
-    }
 
 
 }

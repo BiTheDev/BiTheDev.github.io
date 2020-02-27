@@ -442,16 +442,16 @@ hr:before {
 }
 
 #Skills{
-    background: url("../images/cloud.jpg") fixed center no-repeat cover;
-    /* background-image: url("../images/cloud.jpg");
+    /* background: url("../images/cloud.jpg") fixed center no-repeat cover; */
+    background-image: url("../images/cloud.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
     min-height:85vh;
     z-index: -1;
     padding-top:5em;
-    padding-bottom: 1.5em;
+    padding-bottom: 5em;
     font-family: 'Oxygen', sans-serif;
 }
 
@@ -545,12 +545,12 @@ hr:before {
 
 
 #Projects{
-    background: url("../images/sakura.jpg") fixed center no-repeat cover;
-    /* background-image: url("../images/sakura.jpg");
+    /* background: url("../images/sakura.jpg") fixed center no-repeat cover; */
+    background-image: url("../images/sakura.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
     margin-top: -10vh;
     height: auto;
     padding-top:5em;
