@@ -448,6 +448,8 @@ hr:before {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    -moz-background-size: cover;
+	-o-background-size: cover;
     min-height:85vh;
     z-index: -1;
     padding-top:5em;
@@ -551,6 +553,8 @@ hr:before {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    -moz-background-size: cover;
+	-o-background-size: cover;
     margin-top: -10vh;
     height: auto;
     padding-top:5em;
