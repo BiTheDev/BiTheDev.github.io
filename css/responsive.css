@@ -61,9 +61,6 @@
         width:95%;
     }
 
-    #Skills, #Projects{
-        background: white fixed center no-repeat cover;
-    }
 }
 
 /* Iphone X */
@@ -130,7 +127,7 @@
     }
 
     #Skills, #Projects{
-        background-color:white;
+        background: white fixed center no-repeat cover;
     }
 
 
