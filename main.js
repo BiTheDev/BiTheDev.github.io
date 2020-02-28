@@ -1,9 +1,9 @@
 function responsivenav() {
     var x = document.getElementById("myTopnav");
-    if (x.className === "topnav mdb-color lighten-4") {
-        x.className += " responsive";
+    if ($("#myTopnav").hasClass("responsive")) {
+        x.classList.remove("responsive");
     } else {
-        x.className = "topnav mdb-color lighten-4";
+        x.classList.add("responsive");
     }
 }
 
