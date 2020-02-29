@@ -155,14 +155,19 @@
     <div id="Skills">
         <h2 style="text-align:center">Skills</h2>
         <div class="SkillContent">
-            <div class="tabs">
-                <ul>
-                    <li>Language</li>
-                    <li>Framework</li>
-                    <li>Database</li>
-                    <li>Tools</li>
-                </ul>
-            </div>
+
+            <input type="radio" id="languageTab" name="tabs" checked>
+            <label for="languageTab">Language</label>
+
+            <input type="radio" id="frameworkTab" name="tabs">
+            <label for="frameworkTab">Framework</label>
+
+            <input type="radio" id="databaseTab" name="tabs">
+            <label for="databaseTab">Database</label>
+            
+            <input type="radio" id="toolsTab" name="tabs">
+            <label for="toolsTab">Tools</label>
+
             <div class="SkillBox" id="language">
                 <img src="./images/icons/c-sharp.png" alt="">
                 <img src="./images/icons/python.png" alt="">
@@ -175,7 +180,7 @@
                 <img src="./images/icons/RStudio.png" alt="">
                 <img src="./images/icons/sql.png" alt="">
             </div>
-            <div class="SkillBox" id="framework" style="display:none">
+            <div class="SkillBox" id="framework">
                 <img src="./images/icons/bootstrap.png" alt="">
                 <img src="./images/icons/flask.png" alt="">
                 <img src="./images/icons/django.png" alt="">
@@ -186,14 +191,14 @@
                 <img src="./images/icons/ajax.png" alt="">
                 <img src="./images/icons/mongoose.png" alt="">
             </div>
-            <div class="SkillBox" id="database" style="display:none">
+            <div class="SkillBox" id="database">
                 <img src="./images/icons/mysql.png" alt="">
                 <img src="./images/icons/postgreSQL.png" alt="">
                 <img src="./images/icons/mongodb.png" alt="">
                 <img src="./images/icons/sqlite.png" alt="">
 
             </div>
-            <div class="SkillBox" id="tool" style="display:none">
+            <div class="SkillBox" id="tool">
                 <img src="./images/icons/nodejs.png" alt="">
                 <img src="./images/icons/github.png" alt="">
                 <img src="./images/icons/npm.png" alt="">

@@ -432,7 +432,61 @@ hr:before {
 
 }
 
-.tabs ul{
+input {
+    display: none;
+  }
+  
+  label {
+    font-family: 'Oxygen', sans-serif;
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(84,110,122);
+    border: 1px solid transparent;
+  }
+  
+  label:before {
+    font-weight: normal;
+    margin-right: 10px;
+  }
+  input:checked + label {
+    color: rgb(52,73,94);
+    border: 1px solid white;
+    border-top: 2px solid red;
+    border-bottom: 1px solid skyblue;
+  }
+  
+  label:hover {
+    color: #888;
+    cursor: pointer;
+  }
+
+  .SkillBox{
+      border:1px solid white;
+      display:none;
+      width:100%;
+    min-height:55vh;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: rgba(189,195,199,.5);
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+
+  #languageTab:checked ~ #language,
+  #frameworkTab:checked ~ #framework,
+  #databaseTab:checked ~ #database,
+  #toolsTab:checked ~ #tool {
+    display: flex;
+  }
+    /* display: block; */
+
+
+/* .tabs ul{
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -440,7 +494,6 @@ hr:before {
     justify-content: space-around;
     width:100%;
     padding:0px;
-    /* padding-left:0px; */
     margin-bottom: 0px;
 }
 .tabs ul li{
@@ -453,25 +506,12 @@ hr:before {
 
 .tabs ul li:hover{
     background-color: rgba(189,195,199,.5);
-    /* height:100%; */
-}
-
-.SkillBox{
-    display: flex;
-    width:100%;
-    min-height:55vh;
-    margin-left:auto;
-    margin-right:auto;
-    background-color: rgba(189,195,199,.5);
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+} */
 
 .SkillBox img{
     margin: 2em 4em 1em 4em;
-    width:6em;
-    height:6em;
+    width:5em;
+    height:5em;
 
 }
 
