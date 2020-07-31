@@ -432,6 +432,11 @@ hr:before {
 
 }
 
+#streamlit{
+    width:120px !important;
+    height: 100px !important;
+}
+
 input {
     display: none;
   }
