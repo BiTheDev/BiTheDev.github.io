@@ -109,7 +109,7 @@ html{
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
     
 }
 #thumbnail h1{
@@ -305,7 +305,7 @@ hr:before {
 
 .MeContent .introbox{
     width: 30%;
-    height:400px;
+    height:auto;
     text-align: left;
     padding:10px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -482,10 +482,13 @@ input {
   }
 
 
+
   #languageTab:checked ~ #language,
-  #frameworkTab:checked ~ #framework,
+  #WebMobDevTab:checked ~ #WebMobDev,
   #databaseTab:checked ~ #database,
-  #toolsTab:checked ~ #tool {
+  #SystemTab:checked ~ #System,
+  #PMTab:checked ~ #management,
+  #DataAnaTab:checked ~ #DataAna {
     display: flex;
   }
     /* display: block; */
@@ -558,7 +561,7 @@ input {
 
 #Projects{
     /* background: url("../images/sakura.jpg") fixed center no-repeat cover; */
-    background-image: url("../images/sakura.jpg");
+    background: url("../images/sakura.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -586,15 +589,19 @@ input {
 
 }
 
+.ProBox h5{
+    margin-top:.5em;
+}
+
 .ProBox{
     width:30%;
-    padding: 2.5em 1em;
-    clip-path: polygon(0 10%, 100% 0, 100% 98%, 0% 100%);
+    padding: 3em 1em;
+    clip-path: polygon(0 10%, 100% 0, 100% 95%, 0% 100%);
     background-color: rgba(255,255,255,0.6);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height:20em;
+    justify-content: space-between;
+    height:25em;
 }
 
 .ProBox h6, .ProBox button{

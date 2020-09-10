@@ -69,9 +69,9 @@
 /* Iphone X */
 @media only screen and (max-width: 812px){
     #thumbnail{
-        justify-content: flex-start;
-        padding-top: 4em;
-        clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
+        justify-content: center;
+        padding-top: 6em;
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 95%, 0 100%, 0 0);
     }
     #thumbnail h1{
         font-size: 40px;
@@ -83,7 +83,7 @@
         font-size: 32px;
     }
     .arrow{
-        top:45%;
+        display: none;
     }
     .MeContent{
         flex-wrap: wrap;
@@ -94,6 +94,7 @@
         margin-bottom: 20px;
     }
     #Education{
+        clip-path: polygon(50% 2%, 100% 0, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 0);
         padding-top:7em;
     }
 
@@ -123,6 +124,7 @@
     }
     #Projects{
         margin-top: -10vh;
+        background:rgb(232, 232, 232);
     }
     .ProBox{
         width:48%;
@@ -162,7 +164,7 @@
     }
 
     .MeContent .introbox{
-        height:500px
+        height:550px
     }
 
     #Education{
