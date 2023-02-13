@@ -1,0 +1,74 @@
+body {
+  margin: 0px;
+}
+
+#Projects {
+  background: url("../../images/sakura.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: auto;
+  padding-top: 5em;
+  padding-bottom: 1em;
+  font-family: "Oxygen", sans-serif;
+}
+
+.ProContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 50em;
+  margin: 10px auto;
+  padding: 1em 0.5em 0.5em 0.5em;
+  width: 90%;
+}
+
+.ProBox h5 {
+  margin-top: 0.5em;
+}
+
+.ProBox {
+  width: 30%;
+  padding: 4em 1em;
+  clip-path: polygon(0 10%, 100% 0, 100% 95%, 0% 100%);
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 35em;
+}
+
+.ProBox h6,
+.ProBox button {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ProBox h6 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.ProBox p {
+  font-size: 14px;
+}
+
+.ProBox > a {
+  background-color: #2980b9;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.ProBox  .detail{
+    height:50%;
+}
