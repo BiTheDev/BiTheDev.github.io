@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+}
+
+#AboutMe {
+  z-index: -1;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding-top: 4em;
+  text-align: center;
+  justify-content: flex-start;
+  font-family: "Oxygen", sans-serif;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.MeContent {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.MeContent li {
+  word-wrap: break-word;
+  line-height: 2;
+}
+
+.MeContent .introbox {
+  width: 30%;
+  height: auto;
+  text-align: left;
+  padding: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.introbox h3 {
+  text-align: center;
+}
+
+.introbox li,
+.certibox li {
+  font-size: 14px;
+}
+
+#Skills {
+  /* background: url("../images/cloud.jpg") fixed center no-repeat cover; */
+  background-image: url("../../images/cloud.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  min-height: 85vh;
+  z-index: -1;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  font-family: "Oxygen", sans-serif;
+}
+
+.SkillContent {
+  background-color: rgba(236, 240, 241, 0.5);
+  min-height: 60vh;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.SkillBox {
+  border: 1px solid white;
+  /* display:none; */
+  text-align: center;
+  width: 100%;
+  min-height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(189, 195, 199, 0.5);
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.SkillBox img {
+  margin: 2em 4em 1em 4em;
+  width: 5em;
+  height: 5em;
+}

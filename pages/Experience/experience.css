@@ -1,0 +1,35 @@
+body{
+    margin:0px
+}
+
+#Experience{
+    /* clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%); */
+    /* background-color: #1565C0; */
+    min-height: 60vh;
+    /* max-height:100vh; */
+    width: 100%;
+    padding-top: 5em;
+    /* color: white; */
+    padding-bottom: 1.5em;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.ExpContent{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width:60%;
+    min-height: 40vh;
+    margin-left:auto;
+    margin-right: auto;
+    padding:1em;
+    
+}
+
+.ExpContent span{
+    float:right;
+}
+
+.ExpContent ul li{
+    font-size: 14px;
+}

@@ -1,28 +1,22 @@
 /* Add a black background color to the top navigation */
 html{
     scroll-behavior: smooth;
-    
 }
 
-/* section{
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
-} */
+body{
+    margin: 0;
+}
+
 .topnav {
     position: fixed;
     overflow: hidden;
-    width:100% !important;
-    margin-bottom: 20px !important;
-    border: 1px solid transparent !important;
-    /* box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12) !important; */
+    width:100% ;
+    margin-bottom: 20px ;
+    border: 1px solid transparent;
     background-color: #1565C0;
     min-height: 5vh;
     font-size: 20px;
-    font-size: bolder !important;
+    font-size: bolder;
     z-index: 10;
     font-family: 'Oxygen', sans-serif;
     color:white;
@@ -39,21 +33,6 @@ html{
     padding: 10px 16px;
     text-decoration: none;
 }
-
-/* Page transition*/
-/* .slider {
-    background-color: red;
-    height: 100vh;
-    width:100%;
-} */
-/* .slider {
-    position: absolute;
-    width:100%;
-    height: 100%;
-    top:0;
-    overflow: hidden;
-    transition: all 5000ms;
-} */
 
 /* Add an active class to highlight the current page */
 .active {
@@ -72,18 +51,6 @@ html{
     color: black;
 }
 
-
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 812px) {
-    .topnav a:not(:first-child), .provider-dropdown .dropbtn {
-        display: none;
-    }
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
-}
-
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 812px) {
     .topnav.responsive {position: fixed; }
@@ -98,8 +65,6 @@ html{
         text-align: left;
     }
 }
-
-
 
 
 #thumbnail{
@@ -483,39 +448,6 @@ input {
 
 
 
-  #languageTab:checked ~ #language,
-  #WebMobDevTab:checked ~ #WebMobDev,
-  #databaseTab:checked ~ #database,
-  #SystemTab:checked ~ #System,
-  #PMTab:checked ~ #management,
-  #DataAnaTab:checked ~ #DataAna {
-    display: flex;
-  }
-    /* display: block; */
-
-
-/* .tabs ul{
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    min-height:5vh;
-    justify-content: space-around;
-    width:100%;
-    padding:0px;
-    margin-bottom: 0px;
-}
-.tabs ul li{
-    width:80%;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.tabs ul li:hover{
-    background-color: rgba(189,195,199,.5);
-} */
-
 .SkillBox img{
     margin: 2em 4em 1em 4em;
     width:5em;
@@ -542,8 +474,6 @@ input {
     justify-content: flex-start;
     width:60%;
     min-height: 40vh;
-    /* max-height: 90vh; */
-    /* border:2px solid red; */
     margin-left:auto;
     margin-right: auto;
     padding:1em;
@@ -560,7 +490,6 @@ input {
 
 
 #Projects{
-    /* background: url("../images/sakura.jpg") fixed center no-repeat cover; */
     background: url("../images/sakura.jpg");
     background-attachment: fixed;
     background-position: center;
@@ -582,10 +511,8 @@ input {
     flex-wrap: wrap;
     min-height: 50em;
     margin: 10px auto;
-    
     padding: 1em .5em .5em .5em;
     width:90%;
-    /* clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); */
 
 }
 
@@ -606,7 +533,6 @@ input {
 
 .ProBox h6, .ProBox button{
     text-align: center;
-    /* display: block; */
     margin-left:auto;
     margin-right:auto;
 }
@@ -629,7 +555,6 @@ footer{
     background-color: #1565C0;
     color: white;
     width:100%;
-    /* margin-top: -10vh; */
     padding-top: 1em;
 }
 

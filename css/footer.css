@@ -1,0 +1,33 @@
+footer{
+    font-family: 'Oxygen', sans-serif;
+    min-height: 40vh;
+    background-color: #1565C0;
+    color: white;
+    width:100%;
+    padding-top: 1em;
+}
+
+footer .myInfo{
+    margin-top:2em;
+    width:15em;
+    min-height:25vh;
+    margin-left:auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.InfoLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+footer img{
+    width: 5em;
+    height:5em;
+    cursor: pointer;
+}
+
+
