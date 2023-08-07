@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import home from '../pages/HomePage/home';
-import landing from '../pages/LandingPage/landing';
-import projects from '../pages/ProjectsPage/projects';
-import experience from '../pages/ExperiencePage/experience';
-import education from '../pages/EducationPage/education';
+import home from '../pages/HomePage/Home';
+import landing from '../pages/LandingPage/Landing';
+import projects from '../pages/ProjectsPage/Projects';
+import experience from '../pages/ExperiencePage/Experience';
+import education from '../pages/EducationPage/Education';
 
 const Routes = () => (
   <Router>

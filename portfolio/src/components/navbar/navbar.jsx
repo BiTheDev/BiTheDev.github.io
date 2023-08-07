@@ -2,7 +2,7 @@ import React from 'react'
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-const navbar = () => {
+const Navbar = () => {
   return (
     <AppBar position="static">
       <Toolbar>
@@ -18,4 +18,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar
