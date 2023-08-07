@@ -1,23 +1,21 @@
-import { BrowserRouter } from 'react-router-dom'
-import { Container } from '@mui/material'
-import Routes from './routes/Router'
-import Navbar from './components/navbar/navbar'
-import Footer from './components/footer/footer'
-import './App.css'
-
-import React from 'react'
+import { Container } from "@mui/material";
+import { BrowserRouter } from "react-router-dom";
+import Navbar from "./components/navbar/navbar";
+import Footer from "./components/footer/footer";
+import "./App.css";
+import React from "react";
+import PageRoutes from "./routes/PageRoutes";
 
 function App() {
-
   return (
     <BrowserRouter>
-    <Container maxWidth="xl">
-        <Navbar/>
-        <Routes/>
-        <Footer/>
+      <Container maxWidth="xl">
+        <Navbar />
+        <PageRoutes />
+        <Footer />
       </Container>
-    </BrowserRouter> 
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

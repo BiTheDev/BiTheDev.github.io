@@ -1,9 +1,9 @@
 import React from 'react'
 
-const experience = () => {
+const ExperiencePage = () => {
   return (
     <div>experience</div>
   )
 }
 
-export default experience
+export default ExperiencePage
