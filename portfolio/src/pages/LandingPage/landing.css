@@ -3,20 +3,8 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #e6f7ff; /* Sky Blue Background */
-  }
-  
-  .cta-button {
-    margin-top: 30px;
-  }
-  
-  /* Animation */
-  @keyframes floatAnimation {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-15px);
-    }
-  }
-  
+    background-color: #e6f7ff;
+    /* Sky Blue Background */
+}
+
+
