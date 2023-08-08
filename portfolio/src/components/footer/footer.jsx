@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer-container">
       <Container maxWidth="md">
         <Typography variant="body2" align="center" color="textSecondary">
-          &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+          &copy; {new Date().getFullYear()} Brian Ho. All rights reserved.
         </Typography>
         <Typography variant="body2" align="center" color="textSecondary">
           Built with ❤️ using React and Material-UI.
