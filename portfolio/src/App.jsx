@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import React from "react";
@@ -12,7 +12,6 @@ import Layout from "./layout";
 function App() {
   return (
     <BrowserRouter>
-      <Container maxWidth="xl">
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<Layout><HomePage /></Layout>} />
@@ -20,7 +19,6 @@ function App() {
           <Route path="/education" element={<Layout><EducationPage /></Layout>} />
           <Route path="/experience" element={<Layout><ExperiencePage /></Layout>} />
         </Routes>
-      </Container>
     </BrowserRouter>
   );
 }
