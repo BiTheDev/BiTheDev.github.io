@@ -1,6 +1,9 @@
 import React from 'react';
 import { Container, Typography, Button } from '@mui/material';
 import './landing.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const LandingPage = () => {
   return (
@@ -13,6 +16,7 @@ const LandingPage = () => {
           Showcasing my journey in software and web development.
         </Typography>
         <Button
+          data-aos="fade-in"
           variant="contained"
           color="primary"
           href="/portfolio"
