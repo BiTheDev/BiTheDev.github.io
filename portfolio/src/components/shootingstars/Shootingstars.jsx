@@ -6,35 +6,42 @@ function ShootingStar() {
   const mesh = useRef();
   const line = useRef();
 
-  // Generate a random point on a sphere
-  const randomSpherePoint = (radius) => {
+  // Generate a random point on a circle in the X-Z plane
+  const randomCirclePoint = (radius) => {
     const theta = 2 * Math.PI * Math.random();
-    const phi = Math.acos(2 * Math.random() - 1);
-    const x = radius * Math.sin(phi) * Math.cos(theta);
-    const y = radius * Math.sin(phi) * Math.sin(theta);
-    const z = radius * Math.cos(phi);
+    const x = radius * Math.cos(theta);
+    const y = 0;  // y-coordinate remains the same to keep it in a plane
+    const z = radius * Math.sin(theta);
     return { x, y, z };
   };
 
-  const initialPosition = randomSpherePoint(20);
+  const initialPosition = randomCirclePoint(10);  // Starting circle with radius 10
   const [position, setPosition] = useState(initialPosition);
+  
+  // Initial tail geometry
+  const initialTailGeometry = new THREE.BufferGeometry().setFromPoints([
+    new THREE.Vector3(initialPosition.x, initialPosition.y, initialPosition.z),
+    new THREE.Vector3(initialPosition.x, initialPosition.y, initialPosition.z),
+  ]);
 
   useFrame(() => {
-    if (mesh.current) {
-      const speed = 0.03;
+    if (mesh.current && line.current) {
+      const speed = 0.003;
       mesh.current.position.x += position.x * speed;
       mesh.current.position.y += position.y * speed;
       mesh.current.position.z += position.z * speed;
 
-      const tailGeometry = new THREE.BufferGeometry().setFromPoints([
+      // Update tail geometry
+      const newTailGeometry = new THREE.BufferGeometry().setFromPoints([
         new THREE.Vector3(mesh.current.position.x, mesh.current.position.y, mesh.current.position.z),
         new THREE.Vector3(
-          mesh.current.position.x - position.x * 2 * speed,
-          mesh.current.position.y - position.y * 2 * speed,
-          mesh.current.position.z - position.z * 2 * speed
+          mesh.current.position.x - position.x * 0.1,
+          mesh.current.position.y - position.y * 0.1,
+          mesh.current.position.z - position.z * 0.1
         ),
       ]);
-      line.current.geometry = tailGeometry;
+      line.current.geometry.dispose();  // dispose of old geometry
+      line.current.geometry = newTailGeometry;
 
       const distance = Math.sqrt(
         mesh.current.position.x ** 2 +
@@ -43,23 +50,18 @@ function ShootingStar() {
       );
 
       if (distance > 40) {
-        const newPosition = randomSpherePoint(20);
-        mesh.current.position.x = newPosition.x;
-        mesh.current.position.y = newPosition.y;
-        mesh.current.position.z = newPosition.z;
-        setPosition(newPosition);
+        mesh.current.position.set(0, 0, 0); // Reset to origin
       }
     }
   });
 
   return (
     <>
-      <mesh ref={mesh} position={[position.x, position.y, position.z]}>
+      <mesh ref={mesh} position={[initialPosition.x, initialPosition.y, initialPosition.z]}>
         <sphereGeometry args={[0.1, 16, 16]} />
-        <meshBasicMaterial color="black" />
+        <meshBasicMaterial color="white" />
       </mesh>
-      <line ref={line}>
-        <bufferGeometry attach="geometry" />
+      <line ref={line} geometry={initialTailGeometry}>
         <lineBasicMaterial attach="material" color="white" />
       </line>
     </>
