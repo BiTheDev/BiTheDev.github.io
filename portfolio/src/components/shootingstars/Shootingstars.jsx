@@ -169,7 +169,7 @@ const ShootingStars = () => {
   }));
 
   return (
-    <Canvas style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'black' }}>
+    <Canvas style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to bottom, #151515 0%, #263238 100%)' }}>
       <ambientLight intensity={0.5} />
       <SetCamera shouldZoomOut={zoomOut} navigate={navigate} />
       <Portal setZoomOut={setZoomOut} />
