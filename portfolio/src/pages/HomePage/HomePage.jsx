@@ -13,6 +13,10 @@ import { styled } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 const StyledDiv = styled("div")({
   height: "100vh",
   background: "linear-gradient(to bottom, #151515 0%, #263238 100%)",
@@ -56,7 +60,7 @@ const HomePage = () => {
   };
   return (
     <StyledDiv>
-      <Container maxWidth="md">
+      <Container maxWidth="md" data-aos="zoom-in">
         <StyledPaper elevation={10}>
           {/* Top Layer */}
           name
