@@ -1,22 +1,36 @@
-import React from 'react';
-import { Container, Typography, Paper, Button, Grid, List, ListItem, ListItemText } from '@mui/material'
-import { styled } from '@mui/material'
+import React from "react";
+import {
+  Container,
+  Typography,
+  Paper,
+  Grid,
+  Card,
+  CardContent,
+  Divider,
+  Button,
+} from "@mui/material";
+import { styled } from "@mui/material";
 
-const StyledDiv = styled('div')({
-  height: '100vh',
-  background: 'linear-gradient(to bottom, #151515 0%, #263238 100%)',
-  color: '#FFFFFF',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
+const StyledDiv = styled("div")({
+  height: "100vh",
+  background: "linear-gradient(to bottom, #151515 0%, #263238 100%)",
+  color: "#FFFFFF",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
 });
 
 const StyledPaper = styled(Paper)({
-  padding: '26px',
-  textAlign: 'center',
-  color: '#FFFFFF',
-  background: 'rgba(255, 255, 255, 0.1)',
+  padding: "26px",
+  textAlign: "center",
+  color: "#FFFFFF",
+  background: "rgba(255, 255, 255, 0.1)",
+});
+
+const StyledCard = styled(Card)({
+  background: "rgba(255, 255, 255, 0.1)",
+  color: "#FFFFFF",
 });
 
 const HomePage = () => {
@@ -24,37 +38,91 @@ const HomePage = () => {
     <StyledDiv>
       <Container maxWidth="md">
         <StyledPaper elevation={10}>
-          <Typography variant="h4" gutterBottom>
-            Hi, I'm [Your Name]
-          </Typography>
+          {/* Top Layer */}
+          name
           <Typography variant="subtitle1" gutterBottom>
-            A [Your Role] passionate about [Your Interests]
+            [Your Role]
           </Typography>
           <Typography variant="body1" paragraph>
-            I have a background in [Your Background] and currently, I am [What You're Doing Now]. 
-            I'm especially interested in [What You're Interested In].
+            [A little about yourself]
           </Typography>
+          <Divider style={{ margin: "16px 0" }} />
+
+          {/* Second Layer */}
           <Typography variant="h6" gutterBottom>
-            Skills/Interests
+            Objectives
           </Typography>
-          <List>
-            <ListItem>
-              <ListItemText primary="Skill/Interest 1" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Skill/Interest 2" />
-            </ListItem>
-            {/* Add more as needed */}
-          </List>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
-              <Button variant="contained" color="primary">
-                View Portfolio
-              </Button>
+              <StyledCard>
+                <CardContent>
+                  <Typography variant="h7">What I'm Looking For</Typography>
+                  <Typography variant="body2">
+                    [What you're looking for]
+                  </Typography>
+                </CardContent>
+              </StyledCard>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Button variant="outlined" color="primary">
-                Contact Me
+              <StyledCard>
+                <CardContent>
+                  <Typography variant="h7">What I Want To Do</Typography>
+                  <Typography variant="body2">[What you want to do]</Typography>
+                </CardContent>
+              </StyledCard>
+            </Grid>
+          </Grid>
+          <Divider style={{ margin: "16px 0" }} />
+
+          {/* Third Layer */}
+          <Typography variant="h6" gutterBottom>
+            Skills
+          </Typography>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={6}>
+              <StyledCard>
+                <CardContent>
+                  <Typography variant="h7">Programming</Typography>
+                </CardContent>
+              </StyledCard>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <StyledCard>
+                <CardContent>
+                  <Typography variant="h7">Database</Typography>
+                </CardContent>
+              </StyledCard>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <StyledCard>
+                <CardContent>
+                  <Typography variant="h7">Framework</Typography>
+                </CardContent>
+              </StyledCard>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <StyledCard>
+                <CardContent>
+                  <Typography variant="h7">Clouds</Typography>
+                </CardContent>
+              </StyledCard>
+            </Grid>
+          </Grid>
+          <Divider style={{ margin: "16px 0" }} />
+
+          {/* Last Layer */}
+          <Typography variant="h6" gutterBottom>
+            Fun Facts & Interests
+          </Typography>
+          <Typography variant="body1" paragraph>
+            [Fun facts and interests]
+          </Typography>
+          <Divider style={{ margin: "16px 0" }} />
+          {/* Contact and Portfolio */}
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={12}>
+              <Button variant="contained" color="primary">
+                View Portfolio
               </Button>
             </Grid>
           </Grid>
