@@ -9,30 +9,50 @@ function SetCamera() {
   return null;
 }
 
+const fragmentShader = `
+  varying vec2 vUv;
+  void main() {
+    vec3 col;
+    float dist = distance(vUv, vec2(0.5, 0.5));
+    col = mix(vec3(0.0, 0.0, 0.3), vec3(0.0, 0.25, 0.5), smoothstep(0.2, 0.5, dist));
+    gl_FragColor = vec4(col, 1.0);
+  }
+`;
+
+const vertexShader = `
+  varying vec2 vUv;
+  void main() {
+    vUv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  }
+`;
+
 function Portal() {
-  // Adjust the arguments to torusGeometry for radius and thickness.
-  // [radius, tube (thickness), radialSegments, tubularSegments]
   return (
     <>
       <mesh position={[0, 0, 1]}>
-        <torusGeometry args={[8, 0.3, 16, 100]} />{/* portal size */}
-        <meshStandardMaterial 
-          color="#0000FF" // Deep Blue
-          emissive="#FFFFFF" // Pure White Glow
-          emissiveIntensity={1.5} // Intensity of the Glow
+        <torusGeometry args={[8, 0.3, 16, 100]} />
+        <shaderMaterial 
+          fragmentShader={fragmentShader}
+          vertexShader={vertexShader}
         />
       </mesh>
       <mesh position={[0, 0, 1]}>
-        <circleGeometry args={[8, 32]} />{/* portal center size, slightly smaller than torus */}
+        <circleGeometry args={[8, 32]} />
         <meshStandardMaterial 
-          color="#2C3E50" // Deep Blue
-          emissive="#2C3E50" // Pure White Glow
-          emissiveIntensity={1.0} // Intensity of the Glow
+          color="#000000" // Black for the center
+          emissive="#000022" // Almost black, but with a hint of blue
+          emissiveIntensity={0.7} // Lower intensity for the center
+          transparent={true}
+          opacity={0.8}
         />
       </mesh>
     </>
   );
 }
+
+
+
 
 function ShootingStar({ theta, phi, speed }) {
   const mesh = useRef();
