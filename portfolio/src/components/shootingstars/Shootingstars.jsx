@@ -3,12 +3,33 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { useNavigate } from "react-router-dom";
 
-function SetCamera() {
+function SetCamera({ shouldZoomOut, navigate }) {
+  const [zoomStep, setZoomStep] = useState(50);
+
   useFrame(({ camera }) => {
-    camera.position.z = 50;
+    camera.position.z = zoomStep;
   });
+
+  useEffect(() => {
+    if (shouldZoomOut) {
+      const zoomInterval = setInterval(() => {
+        if (zoomStep > 200) {
+          clearInterval(zoomInterval);
+          navigate("/home");
+        } else {
+          setZoomStep((prev) => prev + 10);
+        }
+      }, 50);
+
+      return () => {
+        clearInterval(zoomInterval);
+      };
+    }
+  }, [shouldZoomOut, zoomStep, navigate]);
+
   return null;
 }
+
 
 const fragmentShader = `
   varying vec2 vUv;
@@ -29,16 +50,16 @@ const vertexShader = `
 `;
 
 
-function Portal() {
+function Portal({ setZoomOut }) {
   const material = useRef();
   const navigate = useNavigate();
 
   const handlePortalClick = () => {
-    // Animate transition here, and then navigate
-    // For simplicity, we just navigate
     console.log("clicked");
-    navigate("/home"); // Assuming '/homepage' is your homepage route
+    setZoomOut(true);
   };
+
+
 
   const handlePointerOver = () => {
     material.current.emissive.set("#000044");
@@ -140,6 +161,8 @@ function ShootingStar({ theta, phi, speed }) {
 }
 
 const ShootingStars = () => {
+  const [zoomOut, setZoomOut] = useState(false);
+  const navigate = useNavigate();
   const numStars = 500;
   const stars = new Array(numStars).fill(null).map(() => ({
     speed: Math.random() * 0.08 + 0.02,
@@ -148,8 +171,8 @@ const ShootingStars = () => {
   return (
     <Canvas style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'black' }}>
       <ambientLight intensity={0.5} />
-      <SetCamera />
-      <Portal />
+      <SetCamera shouldZoomOut={zoomOut} navigate={navigate} />
+      <Portal setZoomOut={setZoomOut} />
       {stars.map((star, index) => {
         const theta = (index / numStars) * Math.PI * 2;
         const phi = Math.acos((index / numStars) * 2 - 1);
