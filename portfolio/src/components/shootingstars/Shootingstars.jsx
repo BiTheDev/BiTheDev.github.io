@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
+import { useNavigate } from "react-router-dom";
 
 function SetCamera() {
   useFrame(({ camera }) => {
@@ -27,29 +28,55 @@ const vertexShader = `
   }
 `;
 
+
 function Portal() {
+  const material = useRef();
+  const navigate = useNavigate();
+
+  const handlePortalClick = () => {
+    // Animate transition here, and then navigate
+    // For simplicity, we just navigate
+    console.log("clicked");
+    navigate("/home"); // Assuming '/homepage' is your homepage route
+  };
+
+  const handlePointerOver = () => {
+    material.current.emissive.set("#000044");
+  };
+
+  const handlePointerOut = () => {
+    material.current.emissive.set("#000022");
+  };
+
   return (
     <>
       <mesh position={[0, 0, 1]}>
         <torusGeometry args={[8, 0.3, 16, 100]} />
-        <shaderMaterial 
+        <shaderMaterial
           fragmentShader={fragmentShader}
           vertexShader={vertexShader}
         />
       </mesh>
-      <mesh position={[0, 0, 1]}>
+      <mesh
+        position={[0, 0, 1]}
+        onClick={handlePortalClick}
+        onPointerOver={handlePointerOver}
+        onPointerOut={handlePointerOut}
+      >
         <circleGeometry args={[8, 32]} />
-        <meshStandardMaterial 
+        <meshStandardMaterial
+          ref={material}
           color="#000000" // Black for the center
           emissive="#000022" // Almost black, but with a hint of blue
           emissiveIntensity={0.7} // Lower intensity for the center
           transparent={true}
-          opacity={0.8}
+          opacity={1}
         />
       </mesh>
     </>
   );
 }
+
 
 
 
@@ -119,7 +146,7 @@ const ShootingStars = () => {
   }));
 
   return (
-    <Canvas style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'black', pointerEvents: 'none' }}>
+    <Canvas style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'black' }}>
       <ambientLight intensity={0.5} />
       <SetCamera />
       <Portal />
