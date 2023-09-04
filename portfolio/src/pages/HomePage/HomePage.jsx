@@ -11,6 +11,8 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material";
 
+import { useNavigate } from "react-router-dom";
+
 const StyledDiv = styled("div")({
   height: "100vh",
   background: "linear-gradient(to bottom, #151515 0%, #263238 100%)",
@@ -33,7 +35,25 @@ const StyledCard = styled(Card)({
   color: "#FFFFFF",
 });
 
+const StyledButton = styled(Button)({
+  background: "linear-gradient(to bottom, #151515 0%, #263238 100%)",
+  border: "1px solid #FFFFFF",
+  color: "#FFFFFF",
+  '&:hover': {
+    background: "rgba(255, 255, 255, 0.1)",
+  },
+});
+
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const goToEducationAndExperience = () => {
+    navigate("/education-and-experience");
+  };
+
+  const goToProjects = () => {
+    navigate("/projects");
+  };
   return (
     <StyledDiv>
       <Container maxWidth="md">
@@ -120,10 +140,15 @@ const HomePage = () => {
           <Divider style={{ margin: "16px 0" }} />
           {/* Contact and Portfolio */}
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={12}>
-              <Button variant="contained" color="primary">
-                View Portfolio
-              </Button>
+          <Grid item xs={12} sm={6}>
+              <StyledButton variant="contained" color="primary" onClick={goToEducationAndExperience}>
+                Education and Experience
+              </StyledButton>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <StyledButton variant="contained" color="primary" onClick={goToProjects}>
+                Projects
+              </StyledButton>
             </Grid>
           </Grid>
         </StyledPaper>
