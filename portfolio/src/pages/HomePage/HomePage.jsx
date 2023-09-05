@@ -387,13 +387,13 @@ const HomePage = () => {
                     </Box>
                     <Box display="flex" alignItems="center" mt={1}>
                       <i
-                        style={{ fontSize: "56px" }}
+                        style={{ fontSize: "72px" }}
                         class="devicon-gradle-plain-wordmark colored"
                       ></i>
                     </Box>
                     <Box display="flex" alignItems="center" mt={1}>
                       <i
-                        style={{ fontSize: "56px" }}
+                        style={{ fontSize: "68px" }}
                         class="devicon-inkscape-plain-wordmark colored"
                       ></i>
                     </Box>
