@@ -10,6 +10,8 @@ import {
   Button,
   Box,
   Stack,
+  List,
+  ListItem,
 } from "@mui/material";
 import { styled } from "@mui/material";
 
@@ -28,11 +30,10 @@ const StyledDiv = styled("div")({
   alignItems: "center",
 });
 
-const StyledPaper = styled(Paper)({
+const StyledBox = styled(Box)({
   padding: "26px",
   textAlign: "center",
   color: "#FFFFFF",
-  background: "rgba(255, 255, 255, 0.1)",
 });
 
 const StyledCard = styled(Card)({
@@ -61,11 +62,12 @@ const HomePage = () => {
   };
   return (
     <StyledDiv>
-      <Container style={{ padding: "20px" }} maxWidth="md" data-aos="zoom-in">
-        <StyledPaper elevation={10}>
+      <Container style={{ padding: "30px" }} maxWidth="xl" data-aos="zoom-in">
+        <StyledBox>
           {/* Top Layer */}
           <Typography variant="subtitle1" gutterBottom>
-            I am a Computer Science Graduate Student, Seeking Software engineer and web developer position
+            I am a Computer Science Graduate Student, Seeking Software engineer
+            and web developer position
           </Typography>
           <Typography variant="subtitle2" gutterBottom>
             A little about me
@@ -77,7 +79,6 @@ const HomePage = () => {
             maximizing the efficacy of solutions. Ready to bring individualized
             approaches to a dynamic team, available for immediate start
           </Typography>
-          <Divider style={{ margin: "16px 0" }} />
           {/* Second Layer */}
           <Typography variant="h6" gutterBottom>
             Objectives
@@ -86,26 +87,28 @@ const HomePage = () => {
             <Grid item xs={12} sm={6}>
               <StyledCard>
                 <CardContent>
-                  <Typography variant="h7">What I'm Looking For</Typography>
+                  <Typography variant="h6" gutterBottom>
+                    What I'm Looking For
+                  </Typography>
                   <Typography variant="body2">
-                    <ul>
-                      <li>
-                        Seeking a new page of my career in software / web
-                        development position in Greater Seattle Area / Remote
-                      </li>
-                      <li>
+                    <List>
+                      <ListItem disableGutters>
+                        Seeking a new page of my career in software/web
+                        development position in Greater Seattle Area/Remote
+                      </ListItem>
+                      <ListItem disableGutters>
                         An opportunity to grow with the company and sharpen my
                         skills and knowledge.
-                      </li>
-                      <li>
+                      </ListItem>
+                      <ListItem disableGutters>
                         Utilize my skills and knowledge to support the company
                         in growth.
-                      </li>
-                      <li>
+                      </ListItem>
+                      <ListItem disableGutters>
                         A career with close connection with development and
                         management team.
-                      </li>
-                    </ul>
+                      </ListItem>
+                    </List>
                   </Typography>
                 </CardContent>
               </StyledCard>
@@ -119,7 +122,6 @@ const HomePage = () => {
               </StyledCard>
             </Grid>
           </Grid>
-          <Divider style={{ margin: "16px 0" }} />
           {/* Third Layer */}
           <Typography variant="h6" gutterBottom>
             Skills
@@ -130,11 +132,11 @@ const HomePage = () => {
                 <CardContent>
                   <Typography variant="h7">Programming</Typography>
                   <Stack
-                    spacing={{ xs: 1, sm: 2 }}
+                    spacing={{ xs: 1, sm: 3 }}
                     direction="row"
                     useFlexGap
                     flexWrap="wrap"
-                    style={{ height: "150px" }}
+                    style={{ minHeight: "150px" }}
                   >
                     <Box display="flex" alignItems="center" mt={1}>
                       <i
@@ -197,7 +199,7 @@ const HomePage = () => {
                     direction="row"
                     useFlexGap
                     flexWrap="wrap"
-                    style={{ height: "150px" }}
+                    style={{ minHeight: "150px" }}
                   >
                     <Box display="flex" alignItems="center" mt={1}>
                       <i
@@ -219,7 +221,7 @@ const HomePage = () => {
                     </Box>
                     <Box display="flex" alignItems="center" mt={1}>
                       <i
-                        style={{ fontSize: "52px" }}
+                        style={{ fontSize: "56px" }}
                         class="devicon-materialui-plain colored"
                       ></i>
                     </Box>
@@ -244,12 +246,6 @@ const HomePage = () => {
                     <Box display="flex" alignItems="center" mt={1}>
                       <i
                         style={{ fontSize: "56px" }}
-                        class="devicon-django-plain-wordmark colored"
-                      ></i>
-                    </Box>
-                    <Box display="flex" alignItems="center" mt={1}>
-                      <i
-                        style={{ fontSize: "56px" }}
                         class="devicon-dotnetcore-plain"
                       ></i>
                     </Box>
@@ -261,7 +257,7 @@ const HomePage = () => {
                     </Box>
                     <Box display="flex" alignItems="center" mt={1}>
                       <i
-                        style={{ fontSize: "66px" }}
+                        style={{ fontSize: "56px" }}
                         class="devicon-threejs-original-wordmark colored"
                       ></i>
                     </Box>
@@ -274,11 +270,11 @@ const HomePage = () => {
                 <CardContent>
                   <Typography variant="h7">Database</Typography>
                   <Stack
-                    spacing={{ xs: 1, sm: 2 }}
+                    spacing={{ xs: 1, sm: 9 }}
                     direction="row"
                     useFlexGap
                     flexWrap="wrap"
-                    style={{ height: "150px" }}
+                    style={{ minHeight: "150px" }}
                   >
                     <Box display="flex" alignItems="center" mt={1}>
                       <i
@@ -319,11 +315,11 @@ const HomePage = () => {
                 <CardContent>
                   <Typography variant="h7">Clouds</Typography>
                   <Stack
-                    spacing={{ xs: 1, sm: 2 }}
+                    spacing={{ xs: 1, sm: 6 }}
                     direction="row"
                     useFlexGap
                     flexWrap="wrap"
-                    style={{ height: "150px" }}
+                    style={{ minHeight: "150px" }}
                   >
                     <Box display="flex" alignItems="center" mt={1}>
                       <i
@@ -347,16 +343,17 @@ const HomePage = () => {
                 </CardContent>
               </StyledCard>
             </Grid>
+            
             <Grid item xs={12} sm={12}>
               <StyledCard>
                 <CardContent>
                   <Typography variant="h7">Tools</Typography>
                   <Stack
-                    spacing={{ xs: 1, sm: 2 }}
+                    spacing={{ xs: 1, sm: 9 }}
                     direction="row"
                     useFlexGap
                     flexWrap="wrap"
-                    style={{ height: "150px" }}
+                    style={{ minHeight: "150px" }}
                   >
                     <Box display="flex" alignItems="center" mt={1}>
                       <i
@@ -429,7 +426,7 @@ const HomePage = () => {
               </StyledCard>
             </Grid>
           </Grid>
-          <Divider style={{ margin: "16px 0" }} />
+
           {/* Last Layer */}
           <Typography variant="h6" gutterBottom>
             Fun Facts & Interests
@@ -437,7 +434,6 @@ const HomePage = () => {
           <Typography variant="body1" paragraph>
             [Fun facts and interests]
           </Typography>
-          <Divider style={{ margin: "16px 0" }} />
           {/* Contact and Portfolio */}
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
@@ -459,7 +455,7 @@ const HomePage = () => {
               </StyledButton>
             </Grid>
           </Grid>
-        </StyledPaper>
+        </StyledBox>
       </Container>
     </StyledDiv>
   );
