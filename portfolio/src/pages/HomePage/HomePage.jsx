@@ -13,8 +13,8 @@ import { styled } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 AOS.init();
 
 const StyledDiv = styled("div")({
@@ -43,7 +43,7 @@ const StyledButton = styled(Button)({
   background: "linear-gradient(to bottom, #151515 0%, #263238 100%)",
   border: "1px solid #FFFFFF",
   color: "#FFFFFF",
-  '&:hover': {
+  "&:hover": {
     background: "rgba(255, 255, 255, 0.1)",
   },
 });
@@ -68,10 +68,13 @@ const HomePage = () => {
             [Your Role]
           </Typography>
           <Typography variant="body1" paragraph>
-            [A little about yourself]
+            Highly adaptable and deliberative Computer Science graduate with
+            experience in software engineering, seeking a Software Engineer
+            position. Adept at generating innovative ideas (Ideation) and
+            maximizing the efficacy of solutions. Ready to bring individualized
+            approaches to a dynamic team, available for immediate start
           </Typography>
           <Divider style={{ margin: "16px 0" }} />
-
           {/* Second Layer */}
           <Typography variant="h6" gutterBottom>
             Objectives
@@ -97,7 +100,6 @@ const HomePage = () => {
             </Grid>
           </Grid>
           <Divider style={{ margin: "16px 0" }} />
-
           {/* Third Layer */}
           <Typography variant="h6" gutterBottom>
             Skills
@@ -133,7 +135,6 @@ const HomePage = () => {
             </Grid>
           </Grid>
           <Divider style={{ margin: "16px 0" }} />
-
           {/* Last Layer */}
           <Typography variant="h6" gutterBottom>
             Fun Facts & Interests
@@ -144,13 +145,21 @@ const HomePage = () => {
           <Divider style={{ margin: "16px 0" }} />
           {/* Contact and Portfolio */}
           <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
-              <StyledButton variant="contained" color="primary" onClick={goToEducationAndExperience}>
+            <Grid item xs={12} sm={6}>
+              <StyledButton
+                variant="contained"
+                color="primary"
+                onClick={goToEducationAndExperience}
+              >
                 Education and Experience
               </StyledButton>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <StyledButton variant="contained" color="primary" onClick={goToProjects}>
+              <StyledButton
+                variant="contained"
+                color="primary"
+                onClick={goToProjects}
+              >
                 Projects
               </StyledButton>
             </Grid>

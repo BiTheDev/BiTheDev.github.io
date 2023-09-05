@@ -1,7 +1,8 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
+import React, { useRef, useState, useEffect } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import * as THREE from "three";
 import { useNavigate } from "react-router-dom";
+import { Html } from "@react-three/drei";
 
 function SetCamera({ shouldZoomOut, navigate }) {
   const [zoomStep, setZoomStep] = useState(50);
@@ -13,7 +14,7 @@ function SetCamera({ shouldZoomOut, navigate }) {
   useEffect(() => {
     if (shouldZoomOut) {
       const zoomInterval = setInterval(() => {
-        if (zoomStep > 200) {
+        if (zoomStep > 500) {
           clearInterval(zoomInterval);
           navigate("/home");
         } else {
@@ -30,13 +31,12 @@ function SetCamera({ shouldZoomOut, navigate }) {
   return null;
 }
 
-
 const fragmentShader = `
   varying vec2 vUv;
   void main() {
     vec3 col;
     float dist = distance(vUv, vec2(0.5, 0.5));
-    col = mix(vec3(0.0, 0.0, 0.3), vec3(0.0, 0.25, 0.5), smoothstep(0.2, 0.5, dist));
+    col = mix(vec3(0.082, 0.082, 0.082), vec3(0.149, 0.196, 0.22), smoothstep(0.2, 0.5, dist));
     gl_FragColor = vec4(col, 1.0);
   }
 `;
@@ -49,20 +49,18 @@ const vertexShader = `
   }
 `;
 
-
 function Portal({ setZoomOut }) {
+  const [isClicked, setIsClicked] = useState(false);
   const material = useRef();
   const navigate = useNavigate();
 
   const handlePortalClick = () => {
-    console.log("clicked");
+    setIsClicked(true);
     setZoomOut(true);
   };
 
-
-
   const handlePointerOver = () => {
-    material.current.emissive.set("#000044");
+    material.current.emissive.set("#000033");
   };
 
   const handlePointerOut = () => {
@@ -94,13 +92,20 @@ function Portal({ setZoomOut }) {
           opacity={1}
         />
       </mesh>
+
+      {!isClicked && (
+        <Html position={[-2.6, 1, 2]}>
+          <div
+            style={{ color: "white", fontFamily: "Arial", fontSize: 24 }}
+            onClick={handlePortalClick}
+          >
+            Enter
+          </div>
+        </Html>
+      )}
     </>
   );
 }
-
-
-
-
 
 function ShootingStar({ theta, phi, speed }) {
   const mesh = useRef();
@@ -126,10 +131,14 @@ function ShootingStar({ theta, phi, speed }) {
       const distance = mesh.current.position.length();
 
       if (distance > portalRadius) {
-        setCurrentTailLength(Math.min(currentTailLength + speed, maxTailLength));
+        setCurrentTailLength(
+          Math.min(currentTailLength + speed, maxTailLength)
+        );
       }
 
-      const tailPosition = position.clone().multiplyScalar(-currentTailLength * speed);
+      const tailPosition = position
+        .clone()
+        .multiplyScalar(-currentTailLength * speed);
       tailPosition.add(mesh.current.position);
 
       const newTailGeometry = new THREE.BufferGeometry().setFromPoints([
@@ -169,14 +178,30 @@ const ShootingStars = () => {
   }));
 
   return (
-    <Canvas style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to bottom, #151515 0%, #263238 100%)' }}>
+    <Canvas
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        background: "linear-gradient(to bottom, #151515 0%, #263238 100%)",
+      }}
+    >
       <ambientLight intensity={0.5} />
       <SetCamera shouldZoomOut={zoomOut} navigate={navigate} />
       <Portal setZoomOut={setZoomOut} />
       {stars.map((star, index) => {
         const theta = (index / numStars) * Math.PI * 2;
         const phi = Math.acos((index / numStars) * 2 - 1);
-        return <ShootingStar key={index} theta={theta} phi={phi} speed={star.speed} />;
+        return (
+          <ShootingStar
+            key={index}
+            theta={theta}
+            phi={phi}
+            speed={star.speed}
+          />
+        );
       })}
     </Canvas>
   );
