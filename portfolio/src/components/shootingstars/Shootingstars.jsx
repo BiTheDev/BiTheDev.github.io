@@ -3,6 +3,8 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { useNavigate } from "react-router-dom";
 import { Html } from "@react-three/drei";
+import { Button } from "@mui/material";
+
 
 function SetCamera({ shouldZoomOut, navigate }) {
   const [zoomStep, setZoomStep] = useState(50);
@@ -94,14 +96,14 @@ function Portal({ setZoomOut }) {
       </mesh>
 
       {!isClicked && (
-        <Html position={[-2.6, 1, 2]}>
-          <div
-            style={{ color: "white", fontFamily: "Arial", fontSize: 24 }}
-            onClick={handlePortalClick}
-          >
-            Enter
-          </div>
-        </Html>
+        <Html position={[-3.2, 0.8, 2]}>
+        <div
+          style={{ color: "#aaa", fontFamily: "Nova Square", fontSize: 20 }} // changed from 'white' to '#aaa' (grey)
+          onClick={handlePortalClick}
+        >
+          TRAVEL
+        </div>
+      </Html>
       )}
     </>
   );
