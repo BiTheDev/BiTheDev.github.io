@@ -18,7 +18,7 @@ function SetCamera({ shouldZoomOut, navigate }) {
           clearInterval(zoomInterval);
           navigate("/home");
         } else {
-          setZoomStep((prev) => prev + 10);
+          setZoomStep((prev) => prev + 20);
         }
       }, 50);
 
