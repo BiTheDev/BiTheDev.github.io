@@ -116,8 +116,26 @@ const HomePage = () => {
             <Grid item xs={12} sm={6}>
               <StyledCard>
                 <CardContent>
-                  <Typography variant="h7">What I Want To Do</Typography>
-                  <Typography variant="body2">[What you want to do]</Typography>
+                  <Typography variant="h6">My Strength</Typography>
+                  <Typography variant="body2">
+                    <List>
+                      <ListItem disableGutters>
+                      Adaptability
+                      </ListItem>
+                      <ListItem disableGutters>
+                      Individualization
+                      </ListItem>
+                      <ListItem disableGutters>
+                      Deliberative
+                      </ListItem>
+                      <ListItem disableGutters>
+                      Ideation
+                      </ListItem>
+                      <ListItem disableGutters>
+                      Maximizer
+                      </ListItem>
+                    </List>
+                  </Typography>
                 </CardContent>
               </StyledCard>
             </Grid>
@@ -343,7 +361,7 @@ const HomePage = () => {
                 </CardContent>
               </StyledCard>
             </Grid>
-            
+
             <Grid item xs={12} sm={12}>
               <StyledCard>
                 <CardContent>
