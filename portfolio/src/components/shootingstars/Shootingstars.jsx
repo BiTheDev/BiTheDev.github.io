@@ -172,7 +172,7 @@ function ShootingStar({ theta, phi, speed }) {
 const ShootingStars = () => {
   const [zoomOut, setZoomOut] = useState(false);
   const navigate = useNavigate();
-  const numStars = 500;
+  const numStars = 600;
   const stars = new Array(numStars).fill(null).map(() => ({
     speed: Math.random() * 0.08 + 0.02,
   }));
