@@ -88,27 +88,30 @@ const HomePage = () => {
             </g>
           </svg>
           {/* Top Layer */}
-          <Typography variant="subtitle1" gutterBottom>
+          {/* <Typography variant="body2" gutterBottom>
             I am a Computer Science Graduate Student, Seeking Software engineer
             and web developer position
-          </Typography>
-          <Typography variant="subtitle2" gutterBottom>
+          </Typography> */}
+          <StyledCard>
+          <Typography variant="h6" gutterBottom>
             A little about me
           </Typography>
-          <Typography variant="body1" paragraph>
-            Highly adaptable and deliberative Computer Science graduate with
-            experience in software engineering, seeking a Software Engineer
-            position. Adept at generating innovative ideas (Ideation) and
-            maximizing the efficacy of solutions. Ready to bring individualized
-            approaches to a dynamic team, available for immediate start
-          </Typography>
+            <Typography variant="body1" paragraph>
+              Highly adaptable and deliberative Computer Science graduate with
+              experience in software engineering, seeking a Software Engineer
+              position. Adept at generating innovative ideas (Ideation) and
+              maximizing the efficacy of solutions. Ready to bring
+              individualized approaches to a dynamic team, available for
+              immediate start
+            </Typography>
+          </StyledCard>
           {/* Second Layer */}
           <Typography variant="h6" gutterBottom>
             Objectives
           </Typography>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={5}>
-              <StyledCard style={{height: "280px"}}>
+              <StyledCard style={{ height: "280px" }}>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
                     Who am I?
@@ -138,7 +141,7 @@ const HomePage = () => {
               </StyledCard>
             </Grid>
             <Grid item xs={12} sm={2}>
-              <StyledCard style={{height: "280px"}} >
+              <StyledCard style={{ height: "280px" }}>
                 <CardContent>
                   <Typography variant="h6">My Strength</Typography>
                   <Typography variant="body2" align="center">
@@ -154,7 +157,7 @@ const HomePage = () => {
               </StyledCard>
             </Grid>
             <Grid item xs={12} sm={5}>
-              <StyledCard style={{height: "280px"}}>
+              <StyledCard style={{ height: "280px" }}>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
                     What I'm Looking For
