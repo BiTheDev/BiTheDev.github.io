@@ -9,6 +9,7 @@ import {
   Button,
   Typography,
   Container,
+  Chip,
 } from "@mui/material";
 import {
   Timeline,
@@ -22,12 +23,12 @@ import {
 import { styled } from "@mui/material";
 
 const StyledCard = styled(Card)({
-  background: '#263238',
-  color: '#FFFFFF',
+  background: "#263238",
+  color: "#FFFFFF",
 });
 
 const StyledTimelineItem = styled(TimelineItem)({
-  alignItems: 'center', // Make the TimelineItem left-aligned
+  alignItems: "center", // Make the TimelineItem left-aligned
 });
 
 const ProjectsPage = () => {
@@ -35,7 +36,8 @@ const ProjectsPage = () => {
     {
       id: 1,
       title: "Indoor 5G network monitor dashboard",
-      description: "A demo monitor dashboard that...",
+      description:
+        "A demo monitor dashboard built for the 5G network solution project for mars base that allows users to monitor network status and usage",
       technologies: ["React", "Material UI", "HTML", "CSS"],
       image: "/images/monitordash.png",
       githubUrl: "https://github.com/BiTheDev/MonitorDashboard",
@@ -45,8 +47,18 @@ const ProjectsPage = () => {
     {
       id: 2,
       title: "MERN Social Media",
-      description: "A social media project with MERN from web development course hosted on Render",
-      technologies: ["HTML", "CSS","JavaScript", "React","Material UI", "express.js","node.js", "MongoDB"],
+      description:
+        "A social media project with MERN from web development course hosted on Render",
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Material UI",
+        "express.js",
+        "node.js",
+        "MongoDB",
+      ],
       image: "/images/socialmedia.png",
       githubUrl: "https://github.com/BiTheDev/MERN_Social_Media",
       liveDemo: "https://brian-ho-project3-social-app.onrender.com",
@@ -55,8 +67,18 @@ const ProjectsPage = () => {
     {
       id: 2,
       title: "Wordle game",
-      description: "Mini wordle game with React from web development course hosted on Render",
-      technologies: ["HTML", "CSS","JavaScript", "React", "Material UI", "express.js","node.js", "MongoDB", ],
+      description:
+        "Mini wordle game with React from web development course hosted on Render",
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Material UI",
+        "express.js",
+        "node.js",
+        "MongoDB",
+      ],
       image: "/images/wordle.png",
       githubUrl: "https://github.com/BiTheDev/React_Wordle",
       liveDemo: "https://brian-ho-project3-social-app.onrender.com",
@@ -66,7 +88,7 @@ const ProjectsPage = () => {
       id: 3,
       title: "Mini Tip Calculator app",
       description: "A task management application",
-      technologies: ["HTML", "CSS","JavaScript"],
+      technologies: ["HTML", "CSS", "JavaScript"],
       image: "/images/tipcal.png",
       githubUrl: "https://github.com/BiTheDev/TipCalculator",
       liveDemo: "https://bithedev.github.io/TipCalculator/",
@@ -76,76 +98,87 @@ const ProjectsPage = () => {
   ];
 
   return (
-      <Container style={{ padding: "30px" }} maxWidth="xl">
-        <Typography variant="h4" style={{textAlign:"center"}} gutterBottom>
-          My Projects
-        </Typography>
+    <Container style={{ padding: "30px" }} maxWidth="xl">
+      <Typography variant="h4" style={{ textAlign: "center" }} gutterBottom>
+        My Projects
+      </Typography>
 
-        <Timeline position="alternate">
-          {projectsData.map((project) => (
-            <TimelineItem key={project.id}>
-              <TimelineOppositeContent>
-                <Typography color="white">{project.year}</Typography>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
+      <Timeline position="alternate">
+        {projectsData.map((project) => (
+          <TimelineItem key={project.id}>
+            <TimelineOppositeContent>
+              <Typography color="white">{project.year}</Typography>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
               <TimelineDot />
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent>
-                <StyledCard>
-                  <CardActionArea
-                  href={project.liveDemo}
-                  target="_">
-                    <CardMedia
-                      component="img"
-                      alt={project.title}
-                      style={{minHeight:"320px"}}
-                      image={project.image}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        {project.title}
-                      </Typography>
-                      <Typography variant="body2" color="white">
-                        {project.description}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      href={project.githubUrl}
-                      target="_"
-                    >
-                      GitHub
-                    </Button>
-                    <Button
-                      size="small"
-                      color="primary"
-                      href={project.liveDemo}
-                      target="_"
-                    >
-                      Live Demo
-                    </Button>
-                  </CardActions>
-                </StyledCard>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>
-        <div style={{ textAlign: 'center', margin: '20px 0' }}>
-          <Button
-            variant="contained"
-            color="inherit"
-            href="https://github.com/BiTheDev"
-            target="_"
-            style={{background: "linear-gradient(to bottom, #151515 0%, #263238 100%)"}}
-          >
-            See More Projects on GitHub
-          </Button>
-        </div>
-      </Container>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>
+              <StyledCard>
+                <CardActionArea href={project.liveDemo} target="_">
+                  <CardMedia
+                    component="img"
+                    alt={project.title}
+                    style={{ minHeight: "320px" }}
+                    image={project.image}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {project.title}
+                    </Typography>
+                    <Typography variant="body2" color="white">
+                      {project.description}
+                    </Typography>
+                    <div style={{ marginTop: "10px" }}>
+                      {project.technologies.map((tech, index) => (
+                        <Chip
+                          key={index}
+                          label={tech}
+                          variant="outlined"
+                          size="small"
+                          style={{ margin: "5px", color: "white" }}
+                        />
+                      ))}
+                    </div>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button
+                    size="small"
+                    color="primary"
+                    href={project.githubUrl}
+                    target="_"
+                  >
+                    GitHub
+                  </Button>
+                  <Button
+                    size="small"
+                    color="primary"
+                    href={project.liveDemo}
+                    target="_"
+                  >
+                    Live Demo
+                  </Button>
+                </CardActions>
+              </StyledCard>
+            </TimelineContent>
+          </TimelineItem>
+        ))}
+      </Timeline>
+      <div style={{ textAlign: "center", margin: "20px 0" }}>
+        <Button
+          variant="contained"
+          color="inherit"
+          href="https://github.com/BiTheDev"
+          target="_"
+          style={{
+            background: "linear-gradient(to bottom, #151515 0%, #263238 100%)",
+          }}
+        >
+          See More Projects on GitHub
+        </Button>
+      </div>
+    </Container>
   );
 };
 
