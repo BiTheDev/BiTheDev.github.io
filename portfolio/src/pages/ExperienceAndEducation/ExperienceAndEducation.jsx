@@ -59,7 +59,26 @@ const ExperienceAndEducation = () => {
         "Analyzed and documented intricate user experience bug reports across multiple browsers and operating systems. ",
         "Developed user-centric features for Bing's new tab extension using HTML, CSS, jQuery, AJAX, and Chrome Extension API. ",
         "Fostered a collaborative remote working environment and consistently improved the quality of Bing Search Chrome Extension development. ",
-        // Add more descriptions
+      ],
+    },
+    {
+      title: "Geo-Blockchain Front end Developer (Volunteer)",
+      year: "July 2020 - January 2021",
+      company: "University of Washington | Seattle, WA",
+      description: [
+        "Built an application that encourages users to donate cryptocurrency to financially vulnerable geographic regions by hold fundraising events to support the community.",
+        "Improved website performance by converting website structure into full-stack development with Vue.js, web3.js, MapBox, and MySQL database.",
+        "Acted as a front-end developer to make the application working as expected for demonstration. ",
+      ],
+    },
+    {
+      title: " Web developer / data analyst",
+      year: "July 2020 - January 2021",
+      company: "Eightcig | Las Vega, NV",
+      description: [
+        "Learned E-Commerce and used Shopify's platform to construct a website to cooperate with co-workers.",
+        "Analyzed 300,000+ order statuses, margins, order behaviors, and thousands of product inventory statuses with R, Rstudio, and Excel.",
+        "Acquired Shopify structure and construct a sample website in order to cooperate with other co-workers",
       ],
     },
     // Add more experiences
