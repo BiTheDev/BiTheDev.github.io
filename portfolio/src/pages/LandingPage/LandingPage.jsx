@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container, Typography, Button, } from '@mui/material';
-import Shootingstars from '../../components/shootingstars/shootingstars';
+import ShootingStars from '../../components/shootingstars/ShootingStars';
 import './landing.css';
 
 const LandingPage = () => {
   return (
     <div>
       <Container maxWidth="xl">
-        <Shootingstars/>
+        <ShootingStars/>
       </Container>
     </div>
   );
