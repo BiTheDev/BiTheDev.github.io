@@ -134,6 +134,16 @@ const ProjectsPage = () => {
             </TimelineItem>
           ))}
         </Timeline>
+        <div style={{ textAlign: 'center', margin: '20px 0' }}>
+          <Button
+            variant="contained"
+            color="inherit"
+            href="https://github.com/yourusername"
+            target="_blank"
+          >
+            See More Projects on GitHub
+          </Button>
+        </div>
       </Container>
   );
 };
