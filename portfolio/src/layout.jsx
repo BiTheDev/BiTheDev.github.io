@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from './components/navbar/navbar';
-import Footer from './components/footer/footer';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 import { Box } from '@mui/material';
 import { styled } from "@mui/material";
 
