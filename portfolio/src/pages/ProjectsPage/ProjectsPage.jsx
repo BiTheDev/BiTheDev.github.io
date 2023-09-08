@@ -22,7 +22,7 @@ import {
 import { styled } from "@mui/material";
 
 const StyledCard = styled(Card)({
-  background: 'rgba(255, 255, 255, 0.1)',
+  background: '#263238',
   color: '#FFFFFF',
 });
 

@@ -17,6 +17,23 @@ import { styled } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
 
+import Tooltip from "@mui/material/Tooltip";
+
+import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+import SmartToyIcon from '@mui/icons-material/SmartToy';
+import FlightIcon from "@mui/icons-material/Flight";
+import ThreeDRotationIcon from "@mui/icons-material/ThreeDRotation";
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
+import PsychologyIcon from '@mui/icons-material/Psychology';
+import ModelTrainingIcon from '@mui/icons-material/ModelTraining';
+import CabinIcon from '@mui/icons-material/Cabin';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import HikingIcon from '@mui/icons-material/Hiking';
+import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
+import TerminalIcon from '@mui/icons-material/Terminal';
+import LocalFloristIcon from '@mui/icons-material/LocalFlorist';
+import SettingsIcon from '@mui/icons-material/Settings';
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
@@ -37,7 +54,7 @@ const StyledBox = styled(Box)({
 });
 
 const StyledCard = styled(Card)({
-  background: "rgba(255, 255, 255, 0.1)",
+  background: "#263238",
   color: "#FFFFFF",
 });
 
@@ -50,16 +67,32 @@ const StyledButton = styled(Button)({
   },
 });
 
+const hobbiesData = [
+  { name: "Traveling", icon: <FlightIcon fontSize="large" /> },
+  { name: "Gaming", icon: <SportsEsportsIcon fontSize="large" /> },
+  { name: "Taking Photo", icon: <CameraAltIcon fontSize="large" /> },
+  { name: "Hiking", icon: <HikingIcon fontSize="large" /> },
+  { name: "Camping", icon: <CabinIcon fontSize="large" /> },
+  { name: "Reading", icon: <AutoStoriesIcon fontSize="large" /> },
+  { name: "3D printing", icon: <SettingsIcon fontSize="large" /> },
+  { name: "Enjoying Nature", icon: <LocalFloristIcon fontSize="large" /> },
+  // ... add more hobbies
+];
+
+const interestsData = [
+  { name: "Artifical Intelligence", icon: <PsychologyIcon fontSize="large" /> },
+  { name: "Machine Learning", icon: <ModelTrainingIcon fontSize="large" /> },
+  { name: "Virtual Reality", icon: <ThreeDRotationIcon fontSize="large" /> },
+  { name: "Robotic", icon: <SmartToyIcon fontSize="large" /> },
+  { name: "Programming", icon: <TerminalIcon fontSize="large" /> },
+  { name: "Future Technology", icon: <DeveloperBoardIcon fontSize="large" /> },
+
+  // ... add more interests
+];
+
 const HomePage = () => {
   const navigate = useNavigate();
 
-  const goToEducationAndExperience = () => {
-    navigate("/education-and-experience");
-  };
-
-  const goToProjects = () => {
-    navigate("/projects");
-  };
   return (
     <StyledDiv>
       <Container style={{ padding: "30px" }} maxWidth="xl" data-aos="zoom-in">
@@ -93,9 +126,9 @@ const HomePage = () => {
             and web developer position
           </Typography> */}
           <StyledCard>
-          <Typography variant="h6" gutterBottom>
-            A little about me
-          </Typography>
+            <Typography variant="h6" gutterBottom>
+              A little about me
+            </Typography>
             <Typography variant="body1" paragraph>
               Highly adaptable and deliberative Computer Science graduate with
               experience in software engineering, seeking a Software Engineer
@@ -317,7 +350,7 @@ const HomePage = () => {
                     <Box display="flex" alignItems="center" mt={1}>
                       <i
                         style={{ fontSize: "56px" }}
-                        class="devicon-threejs-original-wordmark colored"
+                        class="devicon-threejs-original-wordmark"
                       ></i>
                     </Box>
                   </Stack>
@@ -447,13 +480,13 @@ const HomePage = () => {
                     <Box display="flex" alignItems="center" mt={1}>
                       <i
                         style={{ fontSize: "72px" }}
-                        class="devicon-gradle-plain-wordmark colored"
+                        class="devicon-gradle-plain-wordmark"
                       ></i>
                     </Box>
                     <Box display="flex" alignItems="center" mt={1}>
                       <i
                         style={{ fontSize: "68px" }}
-                        class="devicon-inkscape-plain-wordmark colored"
+                        class="devicon-inkscape-plain-wordmark"
                       ></i>
                     </Box>
                     <Box display="flex" alignItems="center" mt={1}>
@@ -465,7 +498,7 @@ const HomePage = () => {
                     <Box display="flex" alignItems="center" mt={1}>
                       <i
                         style={{ fontSize: "56px" }}
-                        class="devicon-processing-plain-wordmark colored"
+                        class="devicon-processing-plain-wordmark"
                       ></i>
                     </Box>
                     <Box display="flex" alignItems="center" mt={1}>
@@ -498,28 +531,16 @@ const HomePage = () => {
                   <Stack
                     spacing={{ xs: 1, sm: 6 }}
                     direction="row"
-                    useFlexGap
                     flexWrap="wrap"
                     style={{ minHeight: "150px" }}
                   >
-                    <Box display="flex" alignItems="center" mt={1}>
-                      <i
-                        style={{ fontSize: "100px" }}
-                        class="devicon-amazonwebservices-plain-wordmark colored"
-                      ></i>
-                    </Box>
-                    <Box display="flex" alignItems="center" mt={1}>
-                      <i
-                        style={{ fontSize: "100px" }}
-                        class="devicon-azure-plain-wordmark colored"
-                      ></i>
-                    </Box>
-                    <Box display="flex" alignItems="center" mt={1}>
-                      <i
-                        style={{ fontSize: "100px" }}
-                        class="devicon-googlecloud-plain-wordmark colored"
-                      ></i>
-                    </Box>
+                    {hobbiesData.map((hobby, index) => (
+                      <Tooltip title={hobby.name} key={index}>
+                        <Box display="flex" alignItems="center" mt={1}>
+                          {hobby.icon}
+                        </Box>
+                      </Tooltip>
+                    ))}
                   </Stack>
                 </CardContent>
               </StyledCard>
@@ -527,32 +548,20 @@ const HomePage = () => {
             <Grid item xs={12} sm={6}>
               <StyledCard>
                 <CardContent>
-                  <Typography variant="h7">Interest</Typography>
+                  <Typography variant="h7">Interests</Typography>
                   <Stack
                     spacing={{ xs: 1, sm: 6 }}
                     direction="row"
-                    useFlexGap
                     flexWrap="wrap"
                     style={{ minHeight: "150px" }}
                   >
-                    <Box display="flex" alignItems="center" mt={1}>
-                      <i
-                        style={{ fontSize: "100px" }}
-                        class="devicon-amazonwebservices-plain-wordmark colored"
-                      ></i>
-                    </Box>
-                    <Box display="flex" alignItems="center" mt={1}>
-                      <i
-                        style={{ fontSize: "100px" }}
-                        class="devicon-azure-plain-wordmark colored"
-                      ></i>
-                    </Box>
-                    <Box display="flex" alignItems="center" mt={1}>
-                      <i
-                        style={{ fontSize: "100px" }}
-                        class="devicon-googlecloud-plain-wordmark colored"
-                      ></i>
-                    </Box>
+                    {interestsData.map((interest, index) => (
+                      <Tooltip title={interest.name} key={index}>
+                        <Box display="flex" alignItems="center" mt={1}>
+                          {interest.icon}
+                        </Box>
+                      </Tooltip>
+                    ))}
                   </Stack>
                 </CardContent>
               </StyledCard>
