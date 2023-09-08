@@ -37,40 +37,40 @@ const ProjectsPage = () => {
       title: "Indoor 5G network monitor dashboard",
       description: "A demo monitor dashboard that...",
       technologies: ["React", "Material UI", "HTML", "CSS"],
-      image: "/public/images/monitordash.png",
+      image: "/images/monitordash.png",
       githubUrl: "https://github.com/BiTheDev/MonitorDashboard",
       liveDemo: "https://demo-dashboard-649l.onrender.com/",
-      year: "2023",
+      year: "2023 August",
     },
     {
       id: 2,
       title: "MERN Social Media",
       description: "A social media project with MERN from web development course hosted on Render",
       technologies: ["HTML", "CSS","JavaScript", "React","Material UI", "express.js","node.js", "MongoDB"],
-      image: "/public/images/socialmedia.png",
+      image: "/images/socialmedia.png",
       githubUrl: "https://github.com/BiTheDev/MERN_Social_Media",
       liveDemo: "https://brian-ho-project3-social-app.onrender.com",
-      year: "2023",
+      year: "2023 May",
     },
     {
       id: 2,
       title: "Wordle game",
       description: "Mini wordle game with React from web development course hosted on Render",
       technologies: ["HTML", "CSS","JavaScript", "React", "Material UI", "express.js","node.js", "MongoDB", ],
-      image: "/public/images/wordle.png",
+      image: "/images/wordle.png",
       githubUrl: "https://github.com/BiTheDev/React_Wordle",
       liveDemo: "https://brian-ho-project3-social-app.onrender.com",
-      year: "2023",
+      year: "2023 April",
     },
     {
       id: 3,
       title: "Mini Tip Calculator app",
       description: "A task management application",
       technologies: ["HTML", "CSS","JavaScript"],
-      image: "/public/images/tipcal.png",
+      image: "/images/tipcal.png",
       githubUrl: "https://github.com/BiTheDev/TipCalculator",
       liveDemo: "https://bithedev.github.io/TipCalculator/",
-      year: "2022",
+      year: "2022 December",
     },
     // ... More projects
   ];
@@ -134,6 +134,16 @@ const ProjectsPage = () => {
             </TimelineItem>
           ))}
         </Timeline>
+        <div style={{ textAlign: 'center', margin: '20px 0' }}>
+          <Button
+            variant="contained"
+            color="inherit"
+            href="https://github.com/yourusername"
+            target="_blank"
+          >
+            See More Projects on GitHub
+          </Button>
+        </div>
       </Container>
   );
 };
