@@ -101,7 +101,7 @@ function Portal({ setZoomOut }) {
           style={{ color: "#aaa", fontFamily: "Nova Square", fontSize: 20 }} // changed from 'white' to '#aaa' (grey)
           onClick={handlePortalClick}
         >
-          TRAVEL
+          VISIT
         </div>
       </Html>
       )}

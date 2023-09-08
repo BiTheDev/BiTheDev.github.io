@@ -138,8 +138,9 @@ const ProjectsPage = () => {
           <Button
             variant="contained"
             color="inherit"
-            href="https://github.com/yourusername"
-            target="_blank"
+            href="https://github.com/BiTheDev"
+            target="_"
+            style={{background: "linear-gradient(to bottom, #151515 0%, #263238 100%)"}}
           >
             See More Projects on GitHub
           </Button>
