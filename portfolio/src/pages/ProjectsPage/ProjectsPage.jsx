@@ -38,7 +38,7 @@ const ProjectsPage = () => {
       title: "Indoor 5G network monitor dashboard",
       description:
         "A demo monitor dashboard built for the 5G network solution project for mars base that allows users to monitor network status and usage",
-      technologies: ["React", "Material UI", "HTML", "CSS"],
+      technologies: ["React", "Material UI", "HTML", "CSS", "Inkscape"],
       image: "/images/monitordash.png",
       githubUrl: "https://github.com/BiTheDev/MonitorDashboard",
       liveDemo: "https://demo-dashboard-649l.onrender.com/",
@@ -75,9 +75,6 @@ const ProjectsPage = () => {
         "JavaScript",
         "React",
         "Material UI",
-        "express.js",
-        "node.js",
-        "MongoDB",
       ],
       image: "/images/wordle.png",
       githubUrl: "https://github.com/BiTheDev/React_Wordle",
