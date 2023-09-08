@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Typography, Button, } from '@mui/material';
-import ShootingStars from '../../components/shootingstars/ShootingStars';
+import ShootingStars from '../../Components/ShootingStars';
 import './landing.css';
 
 const LandingPage = () => {
