@@ -176,7 +176,7 @@ const ShootingStars = () => {
   const navigate = useNavigate();
   const numStars = 600;
   const stars = new Array(numStars).fill(null).map(() => ({
-    speed: Math.random() * 0.08 + 0.02,
+    speed: Math.random() * 0.05 + 0.02,
   }));
 
   return (
