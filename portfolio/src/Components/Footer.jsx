@@ -1,7 +1,5 @@
 import React from 'react'
 import { Container, Typography, Link } from '@mui/material';
-import "./footer.css"
-
 const Footer = () => {
   return (
     <footer className="footer-container" style={{background: "linear-gradient(to bottom, #151515 0%, #263238 100%)"}}>
