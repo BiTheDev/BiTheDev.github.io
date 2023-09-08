@@ -96,7 +96,7 @@ function Portal({ setZoomOut }) {
       </mesh>
 
       {!isClicked && (
-        <Html position={[-3.2, 0.8, 2]}>
+        <Html position={[-2.2, 0.8, 2]}>
         <div
           style={{ color: "#aaa", fontFamily: "Nova Square", fontSize: 20 }} // changed from 'white' to '#aaa' (grey)
           onClick={handlePortalClick}
