@@ -40,7 +40,7 @@ const ProjectsPage = () => {
       image: "/images/monitordash.png",
       githubUrl: "https://github.com/BiTheDev/MonitorDashboard",
       liveDemo: "https://demo-dashboard-649l.onrender.com/",
-      year: "2023",
+      year: "2023 August",
     },
     {
       id: 2,
@@ -50,7 +50,7 @@ const ProjectsPage = () => {
       image: "/images/socialmedia.png",
       githubUrl: "https://github.com/BiTheDev/MERN_Social_Media",
       liveDemo: "https://brian-ho-project3-social-app.onrender.com",
-      year: "2023",
+      year: "2023 May",
     },
     {
       id: 2,
@@ -60,7 +60,7 @@ const ProjectsPage = () => {
       image: "/images/wordle.png",
       githubUrl: "https://github.com/BiTheDev/React_Wordle",
       liveDemo: "https://brian-ho-project3-social-app.onrender.com",
-      year: "2023",
+      year: "2023 April",
     },
     {
       id: 3,
@@ -70,7 +70,7 @@ const ProjectsPage = () => {
       image: "/images/tipcal.png",
       githubUrl: "https://github.com/BiTheDev/TipCalculator",
       liveDemo: "https://bithedev.github.io/TipCalculator/",
-      year: "2022",
+      year: "2022 December",
     },
     // ... More projects
   ];
