@@ -125,11 +125,11 @@ const HomePage = () => {
             I am a Computer Science Graduate Student, Seeking Software engineer
             and web developer position
           </Typography> */}
-          <StyledCard>
-            <Typography variant="h6" gutterBottom>
-              A little about me
+          <Typography variant="h6" gutterBottom>
+              About Me
             </Typography>
-            <Typography variant="body1" paragraph>
+          <StyledCard>
+            <Typography variant="body1" paragraph style={{marginTop:"10px"}}>
               Highly adaptable and deliberative Computer Science graduate with
               experience in software engineering, seeking a Software Engineer
               position. Adept at generating innovative ideas (Ideation) and
