@@ -35,6 +35,17 @@ const ProjectsPage = () => {
   const projectsData = [
     {
       id: 1,
+      title: "BookClub APP",
+      description:
+        "A Work in progress web application for people to discuss, review and host a book event",
+      technologies: ["React", "Material UI", "HTML", "CSS", "JavaScript", "Google API", "MongoDB", "Express.js","Node.js"],
+      image: "/images/bookclub.png",
+      githubUrl: "https://github.com/BiTheDev/BookclubApp",
+      liveDemo: "",
+      year: "2023 Oct",
+    },
+    {
+      id: 2,
       title: "Indoor 5G network monitor dashboard",
       description:
         "A demo monitor dashboard built for the 5G network solution project for mars base that allows users to monitor network status and usage",
@@ -45,7 +56,7 @@ const ProjectsPage = () => {
       year: "2023 August",
     },
     {
-      id: 2,
+      id: 3,
       title: "MERN Social Media",
       description:
         "A social media project with MERN from web development course hosted on Render",
@@ -65,7 +76,7 @@ const ProjectsPage = () => {
       year: "2023 May",
     },
     {
-      id: 2,
+      id: 4,
       title: "Wordle game",
       description:
         "Mini wordle game with React from web development course hosted on Render",
@@ -82,7 +93,7 @@ const ProjectsPage = () => {
       year: "2023 April",
     },
     {
-      id: 3,
+      id: 5,
       title: "Mini Tip Calculator app",
       description: "A task management application",
       technologies: ["HTML", "CSS", "JavaScript"],
@@ -91,7 +102,6 @@ const ProjectsPage = () => {
       liveDemo: "https://bithedev.github.io/TipCalculator/",
       year: "2022 December",
     },
-    // ... More projects
   ];
 
   return (

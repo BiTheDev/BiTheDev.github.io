@@ -11,7 +11,7 @@ const Footer = () => {
           Built with ❤️ using React and Material-UI.
         </Typography>
         <Typography variant="body1" align="center">
-          <Link color="#BDC3C7" href="www.linkedin.com/in/brianbho">
+          <Link color="#BDC3C7" href="https://www.linkedin.com/in/brianbho">
             LinkedIn
           </Link>
           {' | '}
